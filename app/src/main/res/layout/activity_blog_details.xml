@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".Activities.AddBlog">
+	
+	<ImageView
+		android:id="@+id/iv_back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="20dp"
+		android:layout_marginTop="30dp"
+		android:src="@drawable/ic_back" />
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Details"
+		android:textColor="@color/black"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="30dp"
+		android:textSize="20sp"/>
+	<ImageView
+		android:id="@+id/iv_gmail"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toStartOf="@id/iv_share"
+		android:layout_marginTop="30dp"
+		android:layout_marginEnd="20dp"
+		android:baselineAlignBottom="true"
+		android:src="@drawable/ic_email" />
+	<ImageView
+		android:id="@+id/iv_share"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_marginTop="30dp"
+		android:layout_marginEnd="20dp"
+		android:baselineAlignBottom="true"
+		android:src="@drawable/ic_share" />
+	<TextView
+		android:layout_marginTop="30dp"
+		android:layout_alignParentEnd="true"
+		android:layout_marginEnd="20dp"
+		android:layout_below="@id/iv_back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/tv_published_date"
+		android:layout_gravity="end"
+		android:gravity="end"/>
+	<TextView
+		android:textStyle="bold"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@id/tv_published_date"
+		android:layout_marginTop="30dp"
+		android:textSize="22sp"
+		android:gravity="center_horizontal"
+		android:focusableInTouchMode="false"
+		android:isScrollContainer="true"
+		android:id="@+id/et_title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" />
+	<ScrollView
+		android:id="@+id/center_section"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/et_title"
+		android:isScrollContainer="true">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:orientation="vertical"
+			android:padding="30dp">
+			
+			<ImageView
+				android:id="@+id/iv_image"
+				android:layout_width="200dp"
+				android:layout_height="200dp"
+				android:layout_gravity="center_horizontal"
+				android:adjustViewBounds="true"
+				android:contentDescription="@null"
+				android:cropToPadding="false"
+				android:scaleType="fitXY" />
+			<TextView
+				android:isScrollContainer="true"
+				android:id="@+id/et_description"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp" />
+		
+		</LinearLayout>
+	</ScrollView>
+	<LinearLayout
+		android:layout_below="@id/center_section"
+		android:gravity="bottom"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="30dp"
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<Button
+			android:textColor="@color/white"
+			android:backgroundTint="@color/grey"
+			android:padding="20dp"
+			android:drawableStart="@drawable/ic_edit"
+			android:layout_width="130dp"
+			android:layout_height="57dp"
+			android:text="Edit"
+			android:id="@+id/btn_edit"
+			android:layout_marginTop="10dp" />
+		<Button
+			android:textColor="@color/white"
+			android:backgroundTint="@color/red"
+			android:padding="20dp"
+			android:drawablePadding="10dp"
+			android:drawableStart="@drawable/ic_delete"
+			android:layout_marginStart="25dp"
+			android:layout_width="130dp"
+			android:layout_height="57dp"
+			android:text="Delete"
+			android:id="@+id/btn_delete"
+			android:layout_marginTop="10dp" />
+	</LinearLayout>
+</RelativeLayout>
