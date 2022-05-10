@@ -4,7 +4,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	tools:context=".Activities.AddBlog">
-	
+
 	<ImageView
 		android:id="@+id/iv_back"
 		android:layout_width="wrap_content"
@@ -12,37 +12,37 @@
 		android:layout_marginStart="20dp"
 		android:layout_marginTop="20dp"
 		android:src="@drawable/ic_back" />
-	
+
 	<ScrollView
 		android:id="@+id/center_section"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/iv_back"
 		android:isScrollContainer="true">
-		
+
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:gravity="center_horizontal"
 			android:orientation="vertical"
 			android:padding="30dp">
-			
+
 			<EditText
 				android:id="@+id/et_title"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:hint="@string/title"
 				android:inputType="text" />
-			
+
 			<EditText
-				
+
 				android:id="@+id/et_description"
 				android:layout_width="match_parent"
 				android:layout_height="100dp"
 				android:gravity="top"
 				android:hint="@string/description"
 				android:inputType="text|textMultiLine" />
-			
+
 			<RelativeLayout
 				android:id="@+id/rl_pic_container"
 				android:layout_width="match_parent"
@@ -51,16 +51,16 @@
 				android:background="@drawable/dotted_border"
 				android:orientation="vertical"
 				android:padding="16dp">
-				
+
 				<TextView
 					android:id="@+id/tv_add_picture"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_centerInParent="true"
+					android:drawableStart="@drawable/ic_file"
 					android:drawablePadding="8dp"
-					android:text="@string/add_picture"
-					android:drawableStart="@drawable/ic_file" />
-				
+					android:text="@string/add_picture" />
+
 				<ImageView
 					android:id="@+id/iv_image"
 					android:layout_width="wrap_content"
@@ -71,26 +71,29 @@
 					android:cropToPadding="false"
 					android:scaleType="fitXY" />
 			</RelativeLayout>
+
 			<LinearLayout
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content">
+
 				<Button
+					android:id="@+id/button_cancel"
 					android:layout_width="130dp"
 					android:layout_height="57dp"
-					android:textColor="@color/white"
+					android:layout_marginTop="10dp"
 					android:backgroundTint="@color/grey"
 					android:text="@string/cancel"
-					android:id="@+id/button_cancel"
-					android:layout_marginTop="10dp" />
+					android:textColor="@color/white" />
+
 				<Button
-					android:textColor="@color/white"
-					android:backgroundTint="@color/grey"
-					android:layout_marginStart="25dp"
+					android:id="@+id/button_ok"
 					android:layout_width="130dp"
 					android:layout_height="57dp"
+					android:layout_marginStart="25dp"
+					android:layout_marginTop="10dp"
+					android:backgroundTint="@color/grey"
 					android:text="@string/add"
-					android:id="@+id/button_ok"
-					android:layout_marginTop="10dp" />
+					android:textColor="@color/white" />
 			</LinearLayout>
 		</LinearLayout>
 	</ScrollView>
